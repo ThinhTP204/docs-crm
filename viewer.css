@@ -1,0 +1,274 @@
+:root {
+  --orange: #f36f21;
+  --orange-dark: #c75213;
+  --orange-pale: #fff1e8;
+  --ink: #202625;
+  --muted: #727c78;
+  --line: #e3e7e4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.viewer-header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 1.4fr) 1fr;
+  align-items: center;
+  min-height: 64px;
+  padding: 0 28px;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+
+.back-link,
+.native-link {
+  color: var(--orange-dark);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.back-link > span:first-child {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 0.7;
+}
+
+.viewer-heading {
+  min-width: 0;
+  text-align: center;
+}
+
+.viewer-category,
+.viewer-heading strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viewer-category {
+  margin-bottom: 2px;
+  color: var(--orange);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.viewer-heading strong {
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.native-link {
+  justify-self: end;
+  color: var(--muted);
+  font-weight: 550;
+}
+
+.native-link:hover,
+.native-link:focus-visible,
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--orange);
+  outline: none;
+}
+
+.related-docs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(100% - 40px, 1120px);
+  min-height: 48px;
+  margin: 0 auto;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--line);
+  scrollbar-width: thin;
+}
+
+.related-label {
+  flex: 0 0 auto;
+  margin-right: 5px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.related-link,
+.related-current {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 0 9px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.related-link {
+  color: var(--muted);
+}
+
+.related-link:hover,
+.related-link:focus-visible {
+  color: var(--orange-dark);
+  background: var(--orange-pale);
+  outline: none;
+}
+
+.related-current {
+  color: var(--orange-dark);
+  background: var(--orange-pale);
+  font-weight: 650;
+}
+
+.viewer-main {
+  width: min(100% - 40px, 1120px);
+  min-height: calc(100vh - 64px);
+  margin: 0 auto;
+  padding: 30px 0 70px;
+}
+
+.viewer-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.viewer-state.is-error {
+  display: block;
+  padding: 40px 20px;
+  color: var(--muted);
+  text-align: center;
+  background: #fff8f3;
+  border: 1px solid #f5d9c5;
+  border-radius: 10px;
+}
+
+.viewer-state.is-error strong,
+.viewer-state.is-error a {
+  color: var(--orange-dark);
+}
+
+.viewer-state.is-error strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.viewer-state.is-error a {
+  text-decoration: underline;
+}
+
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f8d4bd;
+  border-top-color: var(--orange);
+  border-radius: 999px;
+  animation: spin 750ms linear infinite;
+}
+
+.pdf-pages {
+  display: grid;
+  gap: 18px;
+}
+
+.pdf-page {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(27, 39, 34, 0.1);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 680px) {
+  .viewer-header {
+    grid-template-columns: auto 1fr auto;
+    gap: 14px;
+    min-height: 58px;
+    padding: 0 14px;
+  }
+
+  .back-label {
+    display: none;
+  }
+
+  .viewer-heading {
+    text-align: left;
+  }
+
+  .native-link {
+    font-size: 0;
+  }
+
+  .native-link span {
+    font-size: 18px;
+  }
+
+  .viewer-main {
+    width: 100%;
+    padding: 0 0 40px;
+  }
+
+  .related-docs {
+    width: 100%;
+    padding: 0 14px;
+  }
+
+  .pdf-pages {
+    gap: 8px;
+  }
+
+  .pdf-page {
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .loading-spinner {
+    animation: none;
+  }
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Xem trực tiếp tài liệu PDF." />
+    <title>Đang tải tài liệu · Kho tài liệu</title>
+    <link rel="stylesheet" href="viewer.css" />
+  </head>
+  <body>
+    <header class="viewer-header">
+      <a class="back-link" href="index.html" aria-label="Quay lại kho tài liệu">
+        <span aria-hidden="true">←</span>
+        <span class="back-label">Kho tài liệu</span>
+      </a>
+      <div class="viewer-heading">
+        <span class="viewer-category" id="viewerCategory">TÀI LIỆU PDF</span>
+        <strong id="viewerTitle">Đang tải tài liệu...</strong>
+      </div>
+      <a id="nativeLink" class="native-link" href="#" download>Tải PDF <span aria-hidden="true">↓</span></a>
+    </header>
+
+    <nav id="relatedDocs" class="related-docs" aria-label="Tài liệu cùng nhóm"></nav>
+
+    <main class="viewer-main">
+      <div id="viewerState" class="viewer-state" role="status" aria-live="polite">
+        <span class="loading-spinner" aria-hidden="true"></span>
+        <span id="viewerStateText">Đang chuẩn bị tài liệu...</span>
+      </div>
+      <div id="pdfPages" class="pdf-pages" aria-label="Nội dung tài liệu PDF"></div>
+    </main>
+
+    <script type="module" src="viewer.js"></script>
+  </body>
+</html>
