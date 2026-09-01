@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Thư viện tài liệu tuyển sinh nội bộ." />
+    <meta name="description" content="Thư viện tài liệu hệ thống tuyển sinh." />
     <title>Kho tài liệu tuyển sinh</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -21,154 +21,149 @@
           <span class="status-dot" aria-hidden="true"></span>
           <span>Đang cập nhật</span>
           <span class="header-divider" aria-hidden="true"></span>
-          <span>06 tài liệu</span>
+          <span>05 phân hệ · 06 tài liệu</span>
         </div>
       </header>
 
       <main id="top">
-        <section class="library-intro" aria-labelledby="page-title">
-          <div>
-            <p class="eyebrow">THƯ VIỆN TÀI LIỆU</p>
-            <h1 id="page-title">Tài liệu tuyển sinh</h1>
-            <p class="intro-copy">Tổng hợp tài liệu hướng dẫn, phân tích và thư viện biểu đồ dùng trong công tác tuyển sinh.</p>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">CỔNG TÀI LIỆU NỘI BỘ</p>
+            <h1 id="hero-title">Tìm đúng tài liệu,<br /><em>bắt đầu ngay.</em></h1>
+            <p class="hero-description">Tra cứu nhanh các tài liệu định hướng, chỉ số và thư viện biểu đồ phục vụ công tác tuyển sinh.</p>
           </div>
-          <div class="library-stat" aria-label="Số lượng tài liệu">
-            <strong>06</strong>
-            <span>tài liệu<br />đang có</span>
+          <div class="search-wrap">
+            <label class="search-box" for="searchInput">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8" />
+                <path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+              <input id="searchInput" type="search" autocomplete="off" placeholder="Tìm theo tên tài liệu hoặc chủ đề..." aria-describedby="searchStatus" />
+              <kbd>/</kbd>
+            </label>
+            <p id="searchStatus" class="search-status" aria-live="polite">Có thể tìm theo tên tài liệu, nhóm nội dung hoặc từ khóa.</p>
           </div>
         </section>
 
-        <section class="search-section" aria-label="Tìm kiếm tài liệu">
-          <label class="search-box" for="searchInput">
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-              <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8" />
-              <path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-            </svg>
-            <input id="searchInput" type="search" autocomplete="off" placeholder="Tìm tên tài liệu hoặc chủ đề..." aria-describedby="searchStatus" />
-            <kbd>/</kbd>
-          </label>
-          <p id="searchStatus" class="search-status" aria-live="polite">06 tài liệu trong thư viện</p>
-        </section>
+        <section class="system-intro" aria-labelledby="page-title">
+          <p class="eyebrow">TỔNG QUAN HỆ THỐNG</p>
+          <h1 id="page-title">Nguyên lý thiết kế hệ thống</h1>
+          <p class="intro-copy">Cấu trúc tài liệu được tổ chức theo các phân hệ chức năng, giúp mọi người tìm đúng nội dung và theo dõi cùng một cách hiểu.</p>
 
-        <section class="quick-section" aria-labelledby="quick-title">
-          <div class="section-heading">
-            <div>
-              <p class="section-label">TRUY CẬP NHANH</p>
-              <h2 id="quick-title">Chọn nhóm tài liệu</h2>
+          <div class="principle-list">
+            <article class="principle-item">
+              <span class="principle-number">01</span>
+              <div><strong>Một nguồn dữ liệu chung</strong><p>Các bộ phận cùng sử dụng một hệ thống thông tin thống nhất.</p></div>
+            </article>
+            <article class="principle-item">
+              <span class="principle-number">02</span>
+              <div><strong>Theo dõi xuyên suốt hành trình</strong><p>Liên kết dữ liệu từ tiếp cận, tư vấn đến kết quả tuyển sinh.</p></div>
+            </article>
+            <article class="principle-item">
+              <span class="principle-number">03</span>
+              <div><strong>Đo lường bằng chỉ số</strong><p>Thay mô tả cảm tính bằng tiêu chí và số liệu có thể kiểm chứng.</p></div>
+            </article>
+            <article class="principle-item">
+              <span class="principle-number">04</span>
+              <div><strong>Kết nối trực tuyến và trực tiếp</strong><p>Ghi nhận đầy đủ các hoạt động trên nền tảng số và ngoài thực địa.</p></div>
+            </article>
+          </div>
+
+          <div class="foundation-docs" aria-labelledby="foundation-title">
+            <div class="foundation-heading">
+              <div><p class="section-label">TÀI LIỆU NỀN TẢNG</p><h2 id="foundation-title">File PDF sẽ cập nhật sau</h2></div>
+              <span>02 file dự kiến</span>
+            </div>
+            <div class="foundation-file-list">
+              <div class="foundation-file-row">
+                <span class="pdf-badge" aria-hidden="true">PDF</span>
+                <span class="file-name"><strong>Nguyên lý thiết kế hệ thống</strong><small>Tài liệu PDF về nguyên tắc, mô hình và cách vận hành hệ thống</small></span>
+                <span class="file-status">Chưa cập nhật</span>
+              </div>
+              <div class="foundation-file-row">
+                <span class="pdf-badge" aria-hidden="true">PDF</span>
+                <span class="file-name"><strong>Đặc tả các phân hệ chức năng</strong><small>Tài liệu PDF mô tả Dashboard, Student, School, Marketing và Offline</small></span>
+                <span class="file-status">Chưa cập nhật</span>
+              </div>
             </div>
           </div>
-          <div class="quick-grid">
-            <a class="quick-card" href="viewer.html?doc=student-360">
-              <span class="folder-icon" aria-hidden="true">▱</span>
-              <span class="quick-card-copy"><strong>Phân tích thí sinh</strong><small>01 tài liệu</small></span>
-              <span class="quick-arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="quick-card" href="viewer.html?doc=school-360">
-              <span class="folder-icon" aria-hidden="true">▱</span>
-              <span class="quick-card-copy"><strong>Phân tích trường</strong><small>03 tài liệu</small></span>
-              <span class="quick-arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="quick-card" href="viewer.html?doc=dashboard-charts">
-              <span class="folder-icon" aria-hidden="true">▱</span>
-              <span class="quick-card-copy"><strong>Thư viện biểu đồ</strong><small>02 tài liệu</small></span>
-              <span class="quick-arrow" aria-hidden="true">→</span>
-            </a>
+        </section>
+
+        <section class="modules-section" aria-labelledby="modules-title">
+          <div class="section-heading">
+            <div><p class="section-label">CẤU TRÚC HỆ THỐNG</p><h2 id="modules-title">Các phân hệ chức năng</h2></div>
+            <p class="section-hint">Chọn một phân hệ để xem tài liệu bên dưới.</p>
+          </div>
+          <div class="module-grid">
+            <a class="module-card" href="#section-dashboard"><span class="module-number">01</span><strong>Dashboard</strong><small>Tổng hợp và theo dõi chỉ số</small></a>
+            <a class="module-card" href="#section-student"><span class="module-number">02</span><strong>Student</strong><small>Phân tích và chăm sóc thí sinh</small></a>
+            <a class="module-card" href="#section-school"><span class="module-number">03</span><strong>School</strong><small>Phân tích trường trung học phổ thông</small></a>
+            <a class="module-card" href="#section-marketing"><span class="module-number">04</span><strong>Marketing</strong><small>Thu hút và chuyển giao khách hàng tiềm năng</small></a>
+            <a class="module-card" href="#section-offline"><span class="module-number">05</span><strong>Offline</strong><small>Hoạt động trực tiếp và sự kiện</small></a>
           </div>
         </section>
 
         <section class="documents-section" aria-labelledby="documents-title">
           <div class="section-heading section-heading-documents">
-            <div>
-              <p class="section-label">TẤT CẢ TÀI LIỆU</p>
-              <h2 id="documents-title">Danh sách tài liệu</h2>
-            </div>
-            <p class="section-hint">Nhấn vào một tệp để xem PDF.</p>
+            <div><p class="section-label">TÀI LIỆU THEO PHÂN HỆ</p><h2 id="documents-title">Danh sách section</h2></div>
+            <p class="section-hint">Nhấn vào một tệp để xem PDF riêng.</p>
           </div>
 
           <div class="folder-list">
-            <article class="folder-card" id="group-student">
-              <div class="folder-heading">
-                <span class="folder-icon folder-icon-large" aria-hidden="true">▱</span>
-                <div class="folder-title">
-                  <div><h3>Phân tích thí sinh</h3><span class="file-count">01 tài liệu</span></div>
-                  <p>Chân dung, nhu cầu và cơ chế phân loại phục vụ chăm sóc tuyển sinh.</p>
-                </div>
-                <a class="folder-open" href="viewer.html?doc=student-360">Mở nhóm <span aria-hidden="true">→</span></a>
+            <article class="folder-card" id="section-dashboard" data-search="dashboard tổng hợp theo dõi chỉ số biểu đồ chuẩn tuyển sinh">
+              <div class="folder-heading"><span class="folder-index">01</span><span class="folder-icon folder-icon-large" aria-hidden="true"></span><div class="folder-title"><div><h3>Dashboard</h3><span class="file-count">01 tài liệu</span></div><p>Tổng hợp và theo dõi các chỉ số trong hoạt động tuyển sinh.</p></div><span class="section-tag">SECTION</span></div>
+              <div class="file-list">
+                <a class="file-row" href="viewer.html?doc=dashboard-charts" data-search="dashboard thư viện biểu đồ chuẩn tuyển sinh 25 biểu đồ báo cáo">
+                  <span class="pdf-badge" aria-hidden="true">PDF</span><span class="file-name"><strong>Thư viện biểu đồ chuẩn</strong><small>25 biểu đồ nên có trên dashboard tuyển sinh</small></span><span class="file-pages">14 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
+                </a>
               </div>
+            </article>
+
+            <article class="folder-card" id="section-student" data-search="student phân tích chăm sóc thí sinh student 360">
+              <div class="folder-heading"><span class="folder-index">02</span><span class="folder-icon folder-icon-large" aria-hidden="true"></span><div class="folder-title"><div><h3>Student</h3><span class="file-count">01 tài liệu</span></div><p>Phân tích chân dung và cơ chế phân loại thí sinh.</p></div><span class="section-tag">SECTION</span></div>
               <div class="file-list">
                 <a class="file-row" href="viewer.html?doc=student-360" data-search="student 360 phân tích chân dung cơ chế phân loại thí sinh tuyển sinh">
-                  <span class="pdf-badge" aria-hidden="true">PDF</span>
-                  <span class="file-name"><strong>Student 360</strong><small>Phân tích chân dung và cơ chế phân loại thí sinh</small></span>
-                  <span class="file-pages">09 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
+                  <span class="pdf-badge" aria-hidden="true">PDF</span><span class="file-name"><strong>Student 360</strong><small>Phân tích chân dung và cơ chế phân loại thí sinh</small></span><span class="file-pages">09 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
                 </a>
               </div>
             </article>
 
-            <article class="folder-card" id="group-school">
-              <div class="folder-heading">
-                <span class="folder-icon folder-icon-large" aria-hidden="true">▱</span>
-                <div class="folder-title">
-                  <div><h3>Phân tích trường</h3><span class="file-count">03 tài liệu</span></div>
-                  <p>Địa bàn, đặc tính cư dân, quan hệ trường và bộ chỉ số định lượng.</p>
-                </div>
-                <a class="folder-open" href="viewer.html?doc=school-360">Mở nhóm <span aria-hidden="true">→</span></a>
-              </div>
+            <article class="folder-card" id="section-school" data-search="school phân tích trường school 360 định lượng thư viện biểu đồ trường">
+              <div class="folder-heading"><span class="folder-index">03</span><span class="folder-icon folder-icon-large" aria-hidden="true"></span><div class="folder-title"><div><h3>School</h3><span class="file-count">03 tài liệu</span></div><p>Địa bàn, quan hệ trường và các chỉ số phục vụ tuyển sinh.</p></div><span class="section-tag">SECTION</span></div>
               <div class="file-list">
-                <a class="file-row" href="viewer.html?doc=school-360" data-search="school 360 phân tích địa bàn quan hệ trường trung học phổ thông trường tuyển sinh">
-                  <span class="pdf-badge" aria-hidden="true">PDF</span>
-                  <span class="file-name"><strong>School 360</strong><small>Phân tích địa bàn và quan hệ trường trung học phổ thông</small></span>
-                  <span class="file-pages">15 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
+                <a class="file-row" href="viewer.html?doc=school-360" data-search="school 360 phân tích địa bàn quan hệ trường trung học phổ thông tuyển sinh">
+                  <span class="pdf-badge" aria-hidden="true">PDF</span><span class="file-name"><strong>School 360</strong><small>Phân tích địa bàn và quan hệ trường trung học phổ thông</small></span><span class="file-pages">15 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
                 </a>
-                <a class="file-row" href="viewer.html?doc=school-index" data-search="bộ chỉ số định lượng school 360 công thức chấm điểm phân loại trường trung học phổ thông">
-                  <span class="pdf-badge" aria-hidden="true">PDF</span>
-                  <span class="file-name"><strong>Bộ chỉ số định lượng School 360</strong><small>Công thức chấm điểm và phân loại trường</small></span>
-                  <span class="file-pages">08 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
+                <a class="file-row" href="viewer.html?doc=school-index" data-search="bộ chỉ số định lượng school 360 công thức chấm điểm phân loại trường">
+                  <span class="pdf-badge" aria-hidden="true">PDF</span><span class="file-name"><strong>Bộ chỉ số định lượng School 360</strong><small>Công thức chấm điểm và phân loại trường</small></span><span class="file-pages">08 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
                 </a>
                 <a class="file-row" href="viewer.html?doc=school-charts" data-search="thư viện biểu đồ school 360 địa bàn tiềm năng cạnh tranh quan hệ trường">
-                  <span class="pdf-badge" aria-hidden="true">PDF</span>
-                  <span class="file-name"><strong>Thư viện biểu đồ School 360</strong><small>20 biểu đồ phân tích địa bàn, tiềm năng và quan hệ trường</small></span>
-                  <span class="file-pages">12 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
+                  <span class="pdf-badge" aria-hidden="true">PDF</span><span class="file-name"><strong>Thư viện biểu đồ School 360</strong><small>20 biểu đồ phân tích địa bàn, tiềm năng và quan hệ trường</small></span><span class="file-pages">12 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
                 </a>
               </div>
             </article>
 
-            <article class="folder-card" id="group-charts">
-              <div class="folder-heading">
-                <span class="folder-icon folder-icon-large" aria-hidden="true">▱</span>
-                <div class="folder-title">
-                  <div><h3>Thư viện biểu đồ</h3><span class="file-count">02 tài liệu</span></div>
-                  <p>Bộ biểu đồ chuẩn để theo dõi, phân tích và tối ưu hoạt động tuyển sinh.</p>
-                </div>
-                <a class="folder-open" href="viewer.html?doc=dashboard-charts">Mở nhóm <span aria-hidden="true">→</span></a>
-              </div>
+            <article class="folder-card" id="section-marketing" data-search="marketing acquisition map thu hút khách hàng tiềm năng đa nền tảng">
+              <div class="folder-heading"><span class="folder-index">04</span><span class="folder-icon folder-icon-large" aria-hidden="true"></span><div class="folder-title"><div><h3>Marketing</h3><span class="file-count">01 tài liệu</span></div><p>Thu hút khách hàng tiềm năng và chuyển giao sang chăm sóc.</p></div><span class="section-tag">SECTION</span></div>
               <div class="file-list">
-                <a class="file-row" href="viewer.html?doc=dashboard-charts" data-search="thư viện biểu đồ chuẩn dashboard tuyển sinh 25 biểu đồ báo cáo">
-                  <span class="pdf-badge" aria-hidden="true">PDF</span>
-                  <span class="file-name"><strong>Thư viện biểu đồ chuẩn</strong><small>25 biểu đồ nên có trên dashboard tuyển sinh</small></span>
-                  <span class="file-pages">14 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
-                </a>
-                <a class="file-row" href="viewer.html?doc=acquisition-map" data-search="acquisition map thu hút khách hàng tiềm năng đa nền tảng chuyển giao chăm sóc biểu đồ">
-                  <span class="pdf-badge" aria-hidden="true">PDF</span>
-                  <span class="file-name"><strong>Thư viện biểu đồ Acquisition Map</strong><small>24 biểu đồ phân tích thu hút khách hàng tiềm năng đa nền tảng</small></span>
-                  <span class="file-pages">14 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
+                <a class="file-row" href="viewer.html?doc=acquisition-map" data-search="marketing acquisition map thu hút khách hàng tiềm năng đa nền tảng chuyển giao chăm sóc">
+                  <span class="pdf-badge" aria-hidden="true">PDF</span><span class="file-name"><strong>Thư viện biểu đồ Acquisition Map</strong><small>24 biểu đồ phân tích thu hút khách hàng tiềm năng đa nền tảng</small></span><span class="file-pages">14 trang</span><span class="file-action">Xem <span aria-hidden="true">↗</span></span>
                 </a>
               </div>
+            </article>
+
+            <article class="folder-card empty-folder" id="section-offline" data-search="offline hoạt động trực tiếp sự kiện">
+              <div class="folder-heading"><span class="folder-index">05</span><span class="folder-icon folder-icon-large" aria-hidden="true"></span><div class="folder-title"><div><h3>Offline</h3><span class="file-count">Chưa có tài liệu</span></div><p>Hoạt động trực tiếp, sự kiện và các điểm tiếp xúc ngoài thực địa.</p></div><span class="section-tag">SECTION</span></div>
+              <div class="empty-folder-note">Chưa có file PDF trong section này.</div>
             </article>
           </div>
         </section>
 
-        <div id="emptyState" class="empty-state" hidden>
-          <strong>Không tìm thấy tài liệu</strong>
-          <span>Hãy thử một từ khóa khác.</span>
-        </div>
+        <div id="emptyState" class="empty-state" hidden><strong>Không tìm thấy tài liệu</strong><span>Hãy thử một từ khóa khác.</span></div>
       </main>
 
-      <footer class="site-footer">
-        <span>Kho tài liệu tuyển sinh</span>
-        <span>06 tài liệu · Cập nhật nội bộ</span>
-      </footer>
+      <footer class="site-footer"><span>Kho tài liệu tuyển sinh</span><span>05 phân hệ · 06 tài liệu · Cập nhật nội bộ</span></footer>
     </div>
-
     <script src="app.js"></script>
   </body>
 </html>

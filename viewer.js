@@ -7,52 +7,52 @@ const documents = {
   "student-360": {
     file: "Student-360-Phan-tich-chan-dung-va-phan-loai.pdf",
     title: "Student 360",
-    category: "PHÂN TÍCH THÍ SINH",
+    category: "STUDENT",
     group: "student",
   },
   "school-360": {
     file: "School-360-Phan-tich-dia-ban-va-quan-he-truong-THPT.pdf",
     title: "School 360",
-    category: "PHÂN TÍCH TRƯỜNG",
+    category: "SCHOOL",
     group: "school",
   },
   "school-index": {
     file: "Bo-chi-so-dinh-luong-School-360.pdf",
     title: "Bộ chỉ số định lượng School 360",
-    category: "PHÂN TÍCH TRƯỜNG",
+    category: "SCHOOL",
     group: "school",
   },
   "dashboard-charts": {
     file: "Thu-vien-bieu-do-chuan-dashboard-tuyen-sinh.pdf",
     title: "Thư viện biểu đồ chuẩn",
-    category: "THƯ VIỆN BIỂU ĐỒ",
+    category: "DASHBOARD",
     group: "charts",
   },
   "school-charts": {
     file: "Thu-vien-bieu-do-School-360.pdf",
     title: "Thư viện biểu đồ School 360",
-    category: "PHÂN TÍCH TRƯỜNG",
+    category: "SCHOOL",
     group: "school",
   },
   "acquisition-map": {
     file: "Thu-vien-bieu-do-Acquisition-Map.pdf",
     title: "Thư viện biểu đồ Acquisition Map",
-    category: "THƯ VIỆN BIỂU ĐỒ",
+    category: "MARKETING",
     group: "charts",
   },
 };
 
 const groups = {
   student: {
-    title: "Phân tích thí sinh",
+    title: "Student",
     documents: ["student-360"],
   },
   school: {
-    title: "Phân tích trường",
+    title: "School",
     documents: ["school-360", "school-index", "school-charts"],
   },
   charts: {
-    title: "Thư viện biểu đồ",
+    title: "Biểu đồ",
     documents: ["dashboard-charts", "acquisition-map"],
   },
 };
