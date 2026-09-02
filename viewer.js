@@ -73,12 +73,12 @@ const showError = (message) => {
 };
 
 if (!documentInfo) {
-  document.title = "Không tìm thấy tài liệu · Kho tài liệu";
+  document.title = "Không tìm thấy tài liệu · FAIP";
   titleElement.textContent = "Không tìm thấy tài liệu";
   stateElement.classList.add("is-error");
   stateElement.innerHTML = '<strong>Đường dẫn tài liệu không hợp lệ.</strong><a href="index.html">Quay lại kho tài liệu</a>';
 } else {
-  document.title = `${documentInfo.title} · Kho tài liệu`;
+  document.title = `${documentInfo.title} · FAIP`;
   titleElement.textContent = documentInfo.title;
   categoryElement.textContent = documentInfo.category;
   nativeLink.href = documentInfo.file;
