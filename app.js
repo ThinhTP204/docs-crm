@@ -3,10 +3,6 @@
   const folders = [...document.querySelectorAll(".folder-card")];
   const documentsSection = document.querySelector("#documents-section");
   const documentsEmpty = document.querySelector("#documents-empty");
-  const documentsContext = document.querySelector("#documents-context");
-  const selectedModuleNumber = document.querySelector("#selected-module-number");
-  const selectedModuleTitle = document.querySelector("#selected-module-title");
-  const selectedModuleCount = document.querySelector("#selected-module-count");
 
   const setActiveSection = (targetId, shouldScroll = true) => {
     const targetFolder = document.getElementById(targetId);
@@ -17,28 +13,13 @@
     });
 
     if (documentsEmpty) documentsEmpty.hidden = true;
-    if (documentsContext) documentsContext.hidden = false;
-    if (documentsSection) documentsSection.classList.add("has-selection");
 
     moduleCards.forEach((card) => {
       const isActive = card.getAttribute("href") === `#${targetId}`;
       card.classList.toggle("is-active", isActive);
       card.setAttribute("aria-current", isActive ? "true" : "false");
-
-      if (isActive) {
-        if (selectedModuleNumber) {
-          selectedModuleNumber.textContent = card.querySelector(".module-number")?.textContent.trim() || "";
-        }
-        if (selectedModuleTitle) {
-          selectedModuleTitle.textContent = card.querySelector("strong")?.textContent.trim() || "";
-        }
-      }
+      card.setAttribute("aria-selected", isActive ? "true" : "false");
     });
-
-    if (selectedModuleCount) {
-      const fileCount = targetFolder.querySelectorAll(".file-row").length;
-      selectedModuleCount.textContent = `${String(fileCount).padStart(2, "0")} tài liệu`;
-    }
 
     if (
       shouldScroll &&
@@ -51,6 +32,7 @@
 
   moduleCards.forEach((card) => {
     card.setAttribute("aria-current", "false");
+    card.setAttribute("aria-selected", "false");
     card.addEventListener("click", (event) => {
       const targetId = card.getAttribute("href")?.slice(1);
       if (!targetId) return;
@@ -63,8 +45,12 @@
 
   folders.forEach((folder) => folder.classList.add("is-filtered-out"));
   if (documentsEmpty) documentsEmpty.hidden = false;
-  if (documentsContext) documentsContext.hidden = true;
-  if (documentsSection) documentsSection.classList.remove("has-selection");
+
+  folders.forEach((folder) => {
+    const fileList = folder.querySelector(".file-list");
+    const fileCount = fileList?.querySelectorAll(".file-row").length || 0;
+    fileList?.classList.toggle("file-list--two-column", fileCount > 2);
+  });
 
   const initialTarget = window.location.hash.slice(1);
   if (folders.some((folder) => folder.id === initialTarget)) {

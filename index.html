@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Thư viện tài liệu hệ thống tuyển sinh." />
-    <title>FAIP : FPTU Admission Intelligence Platform</title>
+    <title>FAIP - FPTU Admission Intelligence Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
@@ -16,8 +16,8 @@
         <a class="brand" href="#top" aria-label="Về đầu trang">
           <span class="brand-mark" aria-hidden="true">FPT</span>
           <span class="brand-copy">
-            <strong>FAIP : FPTU Admission Intelligence Platform</strong>
-            <small>Cổng tài liệu nội bộ</small>
+            <strong>FAIP - FPTU Admission Intelligence Platform</strong>
+            <small>Nền tảng AI phục vụ Tuyển sinh FPTU</small>
           </span>
         </a>
         <div class="header-meta">
@@ -70,7 +70,7 @@
             </div>
           </div>
 
-          <div class="hero-visual">
+          <!-- <div class="hero-visual">
             <div class="chart-card">
               <div class="chart-header">
                 <div>
@@ -152,23 +152,7 @@
               <div class="chart-footer"><span><i aria-hidden="true">↗</i> School là phân hệ có độ phủ cao nhất</span><span>05 phân hệ</span></div>
             </div>
 
-            <aside class="hero-insight-panel" aria-labelledby="hero-insight-title">
-              <p class="chart-eyebrow">QUICK READ</p>
-              <h2 id="hero-insight-title">Điểm nhìn nhanh</h2>
-              <div class="hero-insight-item">
-                <span class="hero-insight-number">03</span>
-                <strong>School</strong>
-                <small>Nhiều tài liệu nhất</small>
-              </div>
-              <div class="hero-insight-item">
-                <span class="hero-insight-number">04</span>
-                <strong>Phân hệ</strong>
-                <small>Đang hoạt động</small>
-              </div>
-              <div class="hero-insight-note"><span aria-hidden="true">↗</span><p>Dữ liệu trường và chân dung thí sinh là hai nhóm nội dung trọng tâm.</p></div>
-              <a class="hero-insight-link" href="#section-school">Khám phá School 360 <span aria-hidden="true">↗</span></a>
-            </aside>
-          </div>
+          </div> -->
         </section>
 
         <section class="system-intro" aria-labelledby="page-title">
@@ -213,32 +197,18 @@
           <div class="modules-panel">
             <div class="section-heading module-heading">
               <div><p class="section-label">DANH SÁCH PHÂN HỆ</p><h2 id="modules-title">Các phân hệ chức năng</h2></div>
-              <p class="section-hint">Bấm vào card để xem tài liệu tương ứng.</p>
+              <p class="section-hint">Chọn một tab để xem tài liệu tương ứng.</p>
             </div>
-            <div class="module-grid">
-              <a class="module-card" href="#section-dashboard"><span class="module-number">01</span><strong>Dashboard</strong><small>Tổng hợp và theo dõi chỉ số</small></a>
-              <a class="module-card" href="#section-student"><span class="module-number">02</span><strong>Student</strong><small>Phân tích và chăm sóc thí sinh</small></a>
-              <a class="module-card" href="#section-school"><span class="module-number">03</span><strong>School</strong><small>Phân tích trường trung học phổ thông</small></a>
-              <a class="module-card" href="#section-marketing"><span class="module-number">04</span><strong>Marketing</strong><small>Thu hút và chuyển giao khách hàng tiềm năng</small></a>
-              <a class="module-card" href="#section-offline"><span class="module-number">05</span><strong>Offline</strong><small>Hoạt động trực tiếp và sự kiện</small></a>
+            <div class="module-grid" role="tablist" aria-label="Các phân hệ chức năng">
+              <a class="module-card" role="tab" aria-controls="documents-section" href="#section-dashboard"><span class="module-number">01</span><strong>Dashboard</strong><small>Tổng hợp và theo dõi chỉ số</small></a>
+              <a class="module-card" role="tab" aria-controls="documents-section" href="#section-student"><span class="module-number">02</span><strong>Student</strong><small>Phân tích và chăm sóc thí sinh</small></a>
+              <a class="module-card" role="tab" aria-controls="documents-section" href="#section-school"><span class="module-number">03</span><strong>School</strong><small>Phân tích trường trung học phổ thông</small></a>
+              <a class="module-card" role="tab" aria-controls="documents-section" href="#section-marketing"><span class="module-number">04</span><strong>Marketing</strong><small>Thu hút và chuyển giao khách hàng tiềm năng</small></a>
+              <a class="module-card" role="tab" aria-controls="documents-section" href="#section-offline"><span class="module-number">05</span><strong>Offline</strong><small>Hoạt động trực tiếp và sự kiện</small></a>
             </div>
           </div>
 
-          <div class="documents-panel documents-section" id="documents-section" aria-labelledby="documents-title">
-            <div class="section-heading section-heading-documents">
-              <div><p class="section-label">TÀI LIỆU THEO PHÂN HỆ</p><h2 id="documents-title">Danh sách tài liệu</h2></div>
-              <p class="section-hint">Chọn một card bên trái để bắt đầu.</p>
-            </div>
-
-            <div class="documents-context" id="documents-context" hidden aria-live="polite">
-              <span class="documents-context-number" id="selected-module-number">01</span>
-              <div class="documents-context-copy">
-                <span>ĐANG XEM TÀI LIỆU CỦA PHÂN HỆ</span>
-                <strong id="selected-module-title">Dashboard</strong>
-              </div>
-              <span class="documents-context-count" id="selected-module-count">01 tài liệu</span>
-            </div>
-
+          <div class="documents-panel documents-section" id="documents-section" role="tabpanel" aria-label="Tài liệu theo phân hệ">
             <div class="documents-empty" id="documents-empty" role="status">Chọn một phân hệ để xem danh sách tài liệu.</div>
             <div class="folder-list">
             <article class="folder-card" id="section-dashboard" data-search="dashboard tổng hợp theo dõi chỉ số biểu đồ chuẩn tuyển sinh">
