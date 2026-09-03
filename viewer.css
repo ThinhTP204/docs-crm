@@ -214,35 +214,6 @@ a {
   box-shadow: 0 2px 12px rgba(27, 39, 34, 0.1);
 }
 
-.embed-document[hidden] {
-  display: none;
-}
-
-.embed-document {
-  display: grid;
-  gap: 10px;
-}
-
-.embed-frame {
-  display: block;
-  width: 100%;
-  min-height: min(78vh, 920px);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-}
-
-.embed-note {
-  margin: 0;
-  color: var(--muted);
-  font-size: 11px;
-  text-align: center;
-}
-
-.embed-note strong {
-  color: var(--orange-dark);
-}
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -289,13 +260,6 @@ a {
 
   .pdf-page {
     box-shadow: none;
-  }
-
-  .embed-frame {
-    min-height: calc(100vh - 120px);
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
   }
 }
 

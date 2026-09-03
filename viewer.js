@@ -4,20 +4,6 @@ const PDF_WORKER = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.wo
 pdfjsLib.GlobalWorkerOptions.workerSrc = PDF_WORKER;
 
 const documents = {
-  "ai-native-crm": {
-    url: "https://docs.f-caps.net/share/wum349c454/p/ai-native-triet-ly-va-nguyen-ly-thiet-ke-he-thong-ZytWj83sjc",
-    title: "AI Native CRM",
-    category: "AI NATIVE CRM",
-    group: "foundation",
-    mode: "embed",
-  },
-  "design-principles": {
-    url: "https://docs.f-caps.net/share/wum349c454/p/triet-ly-va-nguyen-ly-thiet-ke-he-thong-mlwmInTP6h",
-    title: "Triết lý & nguyên lý thiết kế hệ thống",
-    category: "NGUYÊN LÝ THIẾT KẾ",
-    group: "foundation",
-    mode: "embed",
-  },
   "student-360": {
     file: "Student-360-Phan-tich-chan-dung-va-phan-loai.pdf",
     title: "Student 360",
@@ -57,10 +43,6 @@ const documents = {
 };
 
 const groups = {
-  foundation: {
-    title: "Nền tảng AI",
-    documents: ["ai-native-crm", "design-principles"],
-  },
   student: {
     title: "Student",
     documents: ["student-360"],
@@ -82,16 +64,8 @@ const categoryElement = document.querySelector("#viewerCategory");
 const stateElement = document.querySelector("#viewerState");
 const stateTextElement = document.querySelector("#viewerStateText");
 const pagesElement = document.querySelector("#pdfPages");
-const embedDocumentElement = document.querySelector("#embedDocument");
-const embedFrameElement = document.querySelector("#embedFrame");
 const nativeLink = document.querySelector("#nativeLink");
 const relatedDocsElement = document.querySelector("#relatedDocs");
-
-const getEmbedUrl = (url) => {
-  const embedUrl = new URL(url);
-  embedUrl.searchParams.set("embed", "true");
-  return embedUrl.toString();
-};
 
 const showError = (message) => {
   stateElement.classList.add("is-error");
@@ -107,6 +81,7 @@ if (!documentInfo) {
   document.title = `${documentInfo.title} · FAIP`;
   titleElement.textContent = documentInfo.title;
   categoryElement.textContent = documentInfo.category;
+  nativeLink.href = documentInfo.file;
 
   const group = groups[documentInfo.group];
   relatedDocsElement.innerHTML = `<span class="related-label">${group.title}:</span>`;
@@ -163,18 +138,5 @@ if (!documentInfo) {
     }
   };
 
-  if (documentInfo.mode === "embed") {
-    nativeLink.href = documentInfo.url;
-    nativeLink.target = "_blank";
-    nativeLink.rel = "noopener noreferrer";
-    nativeLink.innerHTML = 'Mở bản gốc <span aria-hidden="true">↗</span>';
-    embedFrameElement.src = getEmbedUrl(documentInfo.url);
-    embedFrameElement.title = documentInfo.title;
-    embedDocumentElement.hidden = false;
-    embedFrameElement.addEventListener("load", () => stateElement.remove(), { once: true });
-  } else {
-    nativeLink.href = documentInfo.file;
-    nativeLink.download = documentInfo.file;
-    loadDocument();
-  }
+  loadDocument();
 }
