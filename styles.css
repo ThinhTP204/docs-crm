@@ -1063,6 +1063,23 @@ input {
   display: none;
 }
 
+.file-row--link {
+  grid-template-columns: 31px minmax(0, 1fr) auto;
+}
+
+.link-badge {
+  display: grid;
+  width: 29px;
+  height: 33px;
+  place-items: center;
+  color: var(--ink);
+  background: #f2f0ed;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  font-size: 8px;
+  font-weight: 800;
+}
+
 .pdf-badge {
   display: grid;
   width: 29px;
