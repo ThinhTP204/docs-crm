@@ -26,7 +26,13 @@ const documents = {
     file: "Thu-vien-bieu-do-chuan-dashboard-tuyen-sinh.pdf",
     title: "Thư viện biểu đồ chuẩn",
     category: "DASHBOARD",
-    group: "charts",
+    group: "dashboard",
+  },
+  "manager-control-center": {
+    file: "new/Trung-tam-dieu-khien-va-quan-tri-cap-Manager.pdf",
+    title: "Trung tâm điều khiển và quản trị cấp Manager",
+    category: "DASHBOARD",
+    group: "dashboard",
   },
   "school-charts": {
     file: "Thu-vien-bieu-do-School-360.pdf",
@@ -89,7 +95,11 @@ const groups = {
   },
   charts: {
     title: "Biểu đồ",
-    documents: ["dashboard-charts", "acquisition-map"],
+    documents: ["acquisition-map"],
+  },
+  dashboard: {
+    title: "Dashboard",
+    documents: ["dashboard-charts", "manager-control-center"],
   },
   design: {
     title: "Thiết kế hệ thống",
