@@ -619,6 +619,18 @@ input {
   box-shadow: 0 8px 20px rgba(50, 38, 27, 0.045);
 }
 
+a.system-part {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.system-part-status.is-ready {
+  color: var(--orange-dark);
+  background: var(--orange-pale);
+  border-color: #efb18a;
+  font-weight: 650;
+}
+
 .system-part-index {
   color: var(--orange);
   font-size: 11px;
@@ -633,6 +645,24 @@ input {
   font-size: 14px;
   font-weight: 750;
   letter-spacing: -0.025em;
+}
+
+.system-part-copy {
+  min-width: 0;
+}
+
+.system-part-copy h2,
+.system-part-copy small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.system-part-copy small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11px;
 }
 
 .system-part-status {

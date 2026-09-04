@@ -40,12 +40,48 @@ const documents = {
     category: "MARKETING",
     group: "charts",
   },
+  "ai-native-crm": {
+    file: "Nguyen-ly-thiet-ke-AI-Native-CRM-v3.pdf",
+    title: "Nguyên lý thiết kế AI-Native CRM",
+    category: "THIẾT KẾ HỆ THỐNG",
+    group: "design",
+  },
+  "crud-lead-permission": {
+    file: "Ma-tran-CRUD-phan-quyen-Lead.pdf",
+    title: "Ma trận CRUD phân quyền Lead",
+    category: "THIẾT KẾ HỆ THỐNG",
+    group: "design",
+  },
+  "student-data-policy": {
+    file: "Chinh-sach-du-lieu-hoc-sinh_1.pdf",
+    title: "Chính sách dữ liệu học sinh",
+    category: "CHÍNH SÁCH",
+    group: "policy",
+  },
+  "sale-process": {
+    file: "Quy-trinh-van-hanh-Bo-phan-Sale.pdf",
+    title: "Quy trình vận hành Bộ phận Sale",
+    category: "STUDENT",
+    group: "student",
+  },
+  "marketing-process": {
+    file: "Quy-trinh-van-hanh-Bo-phan-Marketing.pdf",
+    title: "Quy trình vận hành Bộ phận Marketing",
+    category: "MARKETING",
+    group: "marketing",
+  },
+  "pr-process": {
+    file: "Quy-trinh-van-hanh-Bo-phan-PR.pdf",
+    title: "Quy trình vận hành Bộ phận PR",
+    category: "OFFLINE",
+    group: "offline",
+  },
 };
 
 const groups = {
   student: {
     title: "Student",
-    documents: ["student-360"],
+    documents: ["student-360", "sale-process"],
   },
   school: {
     title: "School",
@@ -54,6 +90,22 @@ const groups = {
   charts: {
     title: "Biểu đồ",
     documents: ["dashboard-charts", "acquisition-map"],
+  },
+  design: {
+    title: "Thiết kế hệ thống",
+    documents: ["ai-native-crm", "crud-lead-permission"],
+  },
+  policy: {
+    title: "Chính sách",
+    documents: ["student-data-policy"],
+  },
+  marketing: {
+    title: "Marketing",
+    documents: ["marketing-process"],
+  },
+  offline: {
+    title: "Offline",
+    documents: ["pr-process"],
   },
 };
 
