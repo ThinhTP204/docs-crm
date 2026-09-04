@@ -93,7 +93,7 @@ const groups = {
   },
   design: {
     title: "Thiết kế hệ thống",
-    documents: ["ai-native-crm", "crud-lead-permission"],
+    documents: ["ai-native-crm"],
   },
   policy: {
     title: "Chính sách",
