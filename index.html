@@ -141,11 +141,11 @@
                 <h2>Lộ trình triển khai</h2>
                 <span class="system-part-status">Sẽ cập nhật</span>
               </article>
-              <article class="system-part">
+              <button type="button" class="system-part is-ready" id="openVideoModal" aria-haspopup="dialog" aria-controls="videoModal">
                 <span class="system-part-index">05</span>
-                <h2>Tổng quan sản phẩm (video)</h2>
-                <span class="system-part-status">Sẽ cập nhật</span>
-              </article>
+                <span class="system-part-copy"><h2>Tổng quan sản phẩm (video)</h2><small>Demo tính năng · MP4</small></span>
+                <span class="system-part-status is-ready">Xem video ↗</span>
+              </button>
               <a class="system-part is-ready" href="viewer.html?doc=student-data-policy">
                 <span class="system-part-index">06</span>
                 <span class="system-part-copy"><h2>Chính sách thông tin</h2><small>Chính sách dữ liệu học sinh · PDF</small></span>
@@ -236,6 +236,21 @@
 
       <footer class="site-footer"><span>Kho tài liệu tuyển sinh</span><span>05 phân hệ · 12 tài liệu · Cập nhật nội bộ</span></footer>
     </div>
+
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" hidden>
+      <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
+      <div class="video-modal-panel">
+        <div class="video-modal-head">
+          <strong id="videoModalTitle">Tổng quan sản phẩm (video)</strong>
+          <button type="button" class="video-modal-close" id="closeVideoModal" aria-label="Đóng">✕</button>
+        </div>
+        <video id="videoModalPlayer" class="video-modal-player" controls playsinline preload="none">
+          <source src="new/demo%20t%C3%ADnh%20n%C4%83ng.mp4" type="video/mp4" />
+          Trình duyệt của bạn không hỗ trợ phát video.
+        </video>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>

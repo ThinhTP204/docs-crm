@@ -56,4 +56,33 @@
   if (folders.some((folder) => folder.id === initialTarget)) {
     setActiveSection(initialTarget, false);
   }
+
+  const videoModal = document.querySelector("#videoModal");
+  const openVideoModalBtn = document.querySelector("#openVideoModal");
+  const closeVideoModalBtn = document.querySelector("#closeVideoModal");
+  const videoModalBackdrop = document.querySelector("#videoModalBackdrop");
+  const videoModalPlayer = document.querySelector("#videoModalPlayer");
+
+  const openVideoModal = () => {
+    if (!videoModal) return;
+    videoModal.hidden = false;
+    document.body.style.overflow = "hidden";
+    videoModalPlayer?.play().catch(() => {});
+  };
+
+  const closeVideoModal = () => {
+    if (!videoModal) return;
+    videoModal.hidden = true;
+    document.body.style.overflow = "";
+    videoModalPlayer?.pause();
+  };
+
+  openVideoModalBtn?.addEventListener("click", openVideoModal);
+  closeVideoModalBtn?.addEventListener("click", closeVideoModal);
+  videoModalBackdrop?.addEventListener("click", closeVideoModal);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && videoModal && !videoModal.hidden) {
+      closeVideoModal();
+    }
+  });
 })();
